@@ -4,9 +4,9 @@ c=bytes.fromhex("2cb1fa402ed1df3b371f435648addae77b4a333e301298d49c00000000")
 
 
 alice=[None]*29
-result=bytes(a[i] ^ c[(7*i+3)%0x19] for i in range(0,29))
-for amy,elma in zip(result,b):
-   alice[elma]=amy
+result=bytes(a[i] ^ c[(7*i+3)%0x19] for i in range(0,29))#根据算法得到
+for amy,elma in zip(result,b):#用zip，可以一次遍历两个迭代对象
+   alice[elma]=amy            #根据伪代码算法
 alice=bytes(alice)
 alice=alice.decode('ascii')   
 print(alice)

@@ -1,4 +1,5 @@
-amy, alice=input("请输入你的数据喵: ").split()#输入两个数据
+amy="7821352D093A1B6C39011A3B2844200C2B024A335231706F5E002D1801174C00021C130E13"
+alice='H0w_t0_3ncrypt?'
 amy=bytes.fromhex(amy)#从16进制字符串中转换
 code2=[ord(c) for c in alice]#将文字转为ascii码
 code1=amy
